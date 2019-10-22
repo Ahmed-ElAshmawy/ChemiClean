@@ -1,0 +1,11 @@
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\bin\Debug\ChemiClean.Core.dll.config
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\bin\Debug\ChemiClean.Core.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\bin\Debug\ChemiClean.Core.pdb
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\bin\Debug\EntityFramework.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\bin\Debug\EntityFramework.xml
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\obj\Debug\ChemiClean.Core.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\obj\Debug\ChemiClean.Core.csproj.CopyComplete
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\obj\Debug\ChemiClean.Core.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Core\obj\Debug\ChemiClean.Core.pdb

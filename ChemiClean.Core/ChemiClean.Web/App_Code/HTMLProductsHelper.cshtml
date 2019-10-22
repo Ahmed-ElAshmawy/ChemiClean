@@ -1,0 +1,76 @@
+﻿@using ChemiClean.Core.Models;
+
+@helper IsDocumentAvailable(bool isDocumentAvailable)
+{
+    if (isDocumentAvailable)
+    {
+        <label class="badge badge-gradient-success">Yes</label>
+    }
+    else
+    {
+        <label class="badge badge-gradient-danger">No</label>
+    }
+}
+
+
+
+@helper ShowDocumentLastUpdatedDate(tblProductDocument document)
+{
+    if (document == null)
+    {
+        <label class="badge badge-gradient-info">NA</label>
+    }
+    else
+    {
+        if (document.LastModifiedDate.HasValue)
+        {
+            <span> @document.LastModifiedDate.Value.ToString("MMM dd, yyyy")</span>
+        }
+        else
+        {
+            <label class="badge badge-gradient-info">NA</label>
+        }
+    }
+}
+
+
+@helper DocumentHasChanged(tblProductDocument document)
+{
+    if (document == null)
+    {
+        <label class="badge badge-gradient-info">No</label>
+    }
+    else
+    {
+        if (document.LastModifiedDate.HasValue && (DateTime.Today - document.LastModifiedDate.Value).Days <= 3)
+        {
+            <label class="badge badge-gradient-warning">Yes</label>
+        }
+        else
+        {
+            <label class="badge badge-gradient-info">No</label>
+        }
+    }
+}
+
+
+@helper ShowProductOperations(tblProduct product)
+{
+    <button onclick="editProduct(@product.Id)" data-toggle="tooltip" data-placement="top" title="Edit" type="button" class="btn btn-inverse-primary btn-icon">
+        <i class="mdi mdi-lead-pencil"></i>
+    </button>
+
+    if (product.DocumentAvailable == false)
+    {
+        <button onclick="syncProduct(@product.Id)" data-toggle="tooltip" data-placement="top" title="Sync" type="button" class="btn btn-inverse-success btn-icon">
+            <i class="mdi mdi-cloud-sync"></i>
+        </button>
+    }
+    else
+    {
+        <button onclick="downLoadProductDocument(@product.Id)" data-toggle="tooltip" data-placement="top" title="Download" type="button" class="btn btn-inverse-primary btn-icon">
+            <i class="mdi mdi-arrow-down-bold-circle"></i>
+        </button>
+    }
+
+}

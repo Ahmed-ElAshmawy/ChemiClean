@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemiClean.Core", "ChemiClean.Core\ChemiClean.Core.csproj", "{AFEAE0EC-1148-4E3D-9C91-01CF11DF9F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemiClean.Repository", "ChemiClean.Repository\ChemiClean.Repository.csproj", "{BD449683-CEA6-40EC-983D-2AF53A53D36A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemiClean.Services", "ChemiClean.Services\ChemiClean.Services.csproj", "{CA2E6B30-8D57-4798-AE7D-6C3539A4C5A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemiClean.Web", "ChemiClean.Web\ChemiClean.Web.csproj", "{EC637959-FB9B-4B92-9613-435D5BCAA499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemiClean.Web.Tests", "ChemiClean.Web.Tests\ChemiClean.Web.Tests.csproj", "{E350737B-56EB-45FC-970E-15C783680DF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFEAE0EC-1148-4E3D-9C91-01CF11DF9F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEAE0EC-1148-4E3D-9C91-01CF11DF9F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEAE0EC-1148-4E3D-9C91-01CF11DF9F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEAE0EC-1148-4E3D-9C91-01CF11DF9F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD449683-CEA6-40EC-983D-2AF53A53D36A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD449683-CEA6-40EC-983D-2AF53A53D36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD449683-CEA6-40EC-983D-2AF53A53D36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD449683-CEA6-40EC-983D-2AF53A53D36A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2E6B30-8D57-4798-AE7D-6C3539A4C5A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2E6B30-8D57-4798-AE7D-6C3539A4C5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2E6B30-8D57-4798-AE7D-6C3539A4C5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2E6B30-8D57-4798-AE7D-6C3539A4C5A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC637959-FB9B-4B92-9613-435D5BCAA499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC637959-FB9B-4B92-9613-435D5BCAA499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC637959-FB9B-4B92-9613-435D5BCAA499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC637959-FB9B-4B92-9613-435D5BCAA499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E350737B-56EB-45FC-970E-15C783680DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E350737B-56EB-45FC-970E-15C783680DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E350737B-56EB-45FC-970E-15C783680DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E350737B-56EB-45FC-970E-15C783680DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1E13CCD-0543-4A5F-86D4-9ECE7171891F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,127 @@
+﻿@using PagedList.Mvc
+@model  PagedList.IPagedList<tblProduct>
+
+
+@using (Html.BeginForm())
+{
+    <div class="row" id="proBanner">
+        <div class="col-12">
+            <span class="d-flex align-items-center purchase-popup">
+                <p>Sync current page product documents.</p>
+
+                <a style="cursor:pointer;" onclick="syncDocuments('@Model.PageNumber','@Model.PageSize')" class="btn ml-auto btn purchase-button">Sync Now</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-danger card-img-holder text-white">
+                <div class="card-body">
+                    <img src="~/Content/Images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">
+                        Products without document.
+                    </h4>
+                    <h2 class="mb-5"> @ViewBag.DocumentNotAvailableCount</h2>
+                    <h6 class="card-text"></h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-success card-img-holder text-white">
+                <div class="card-body">
+                    <img src="~/Content/Images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">
+                        Products with document.
+                    </h4>
+                    <h2 class="mb-5"> @ViewBag.DocumentAvailableCount </h2>
+                    <h6 class="card-text"></h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 stretch-card grid-margin">
+            <div class="card bg-gradient-info card-img-holder text-white">
+                <div class="card-body">
+                    <img src="~/Content/Images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                    <h4 class="font-weight-normal mb-3">
+                        All available Products.
+                    </h4>
+                    <h2 class="mb-5">@Model.TotalItemCount</h2>
+                    <h6 class="card-text"></h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Products</h4>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> Product Name </th>
+                                    <th> Supplier Name </th>
+                                    <th> User Name </th>
+                                    <th> Document Available </th>
+                                    <th> Last Update </th>
+                                    <th> Document has changed</th>
+                                    <th> Operations </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var product in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @product.ProductName
+                                        </td>
+                                        <td>
+                                            @product.SupplierName
+                                        </td>
+                                        <td>
+                                            @product.UserName
+                                        </td>
+                                        <td>
+                                            @HTMLProductsHelper.IsDocumentAvailable(product.DocumentAvailable)
+                                        </td>
+                                        <td>
+                                            @HTMLProductsHelper.ShowDocumentLastUpdatedDate(product.tblProductDocument)
+                                        </td>
+                                        <td>
+                                            @HTMLProductsHelper.DocumentHasChanged(product.tblProductDocument)
+                                        </td>
+
+                                        <td>
+                                            @HTMLProductsHelper.ShowProductOperations(product)
+                                        </td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="container">
+                <div class="pagination">
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                    of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+<div id="loaderSpinner" class="loader loader-default" data-text="Please wait while processing . . ."></div>
+

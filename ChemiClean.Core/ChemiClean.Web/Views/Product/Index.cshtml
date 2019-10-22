@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+
+<div id="productsGridDataID">
+    @Html.Action("ProductsGridDataPartial")
+</div>
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        function editProduct(id) {
+            location.href = "/Product/Edit/" + id;
+        }
+
+        function downLoadProductDocument(id) {
+
+            window.open("/ProductDocument/DownloadDocument/" + id);
+        }
+
+        function syncDocuments(pageNumber, pageSize) {
+
+            $("#loaderSpinner").addClass("is-active");
+
+            $.get("/Product/SyncProductDocuments?page=" + pageNumber + "&pageSize=" + pageSize).done(function (result) {
+
+                $("#loaderSpinner").removeClass("is-active");
+
+                if (result != null && result.Success) {
+                    updateProductsGrid();
+                } else {
+                    toastr.error("Some products could not be synced successfully with document.")
+                }
+
+            });
+        }
+
+        function syncProduct(id) {
+
+            $("#loaderSpinner").addClass("is-active");
+
+            $.get("/Product/SyncSingleProductDocument/" + id).done(function (result) {
+
+                $("#loaderSpinner").removeClass("is-active");
+
+                if (result != null && result.Success) {
+                    updateProductsGrid();
+                } else {
+                    toastr.error("product could not be synced successfully with document, please check product URL validity.")
+                }
+
+            });
+        }
+
+        function updateProductsGrid() {
+
+            $.get("@Url.Action("ProductsGridDataPartial")").done(function (view) {
+                $("#productsGridDataID").html(view);
+            });
+        }
+
+    </script>
+}
+
+

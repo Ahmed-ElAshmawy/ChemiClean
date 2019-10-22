@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> ChemiClean | Products Document Management</title>
+    <!-- plugins:css -->
+    <link href="~/Content/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="~/Content/vendor.bundle.base.css" rel="stylesheet" />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    @*@Styles.Render("~/Content/css")*@
+
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="~/Content/Images/favicon.png" />
+
+    @Styles.Render("~/plugins/toastrStyles")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/plugins/loader/css-loader.css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/plugins/toastr")
+
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" href="/Product/"><img src="~/Content/Images/logo.jpg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="/Product/"><img src="~/Content/Images/logo-mini.svg" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Product/">
+                            <span class="menu-title">Dashboard</span>
+                            <i class="mdi mdi-home menu-icon"></i>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item sidebar-actions">
+                        <span class="nav-link">
+                            <div class="border-bottom">
+                                <h6 class="font-weight-normal mb-3">Products</h6>
+                            </div>
+                            <button onclick="location.href='/Product/Create';" class="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a Product</button>
+
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+
+                    <div class="page-header">
+                        <h3 class="page-title">
+                            <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                                <i class="mdi mdi-home"></i>
+                            </span> @ViewBag.Title
+                        </h3>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 grid-margin">
+                            @RenderBody()
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019. All rights reserved.</span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/Scripts/plugins/template/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Scripts/plugins/template/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/Scripts/plugins/template/off-canvas.js"></script>
+    <script src="~/Scripts/plugins/template/hoverable-collapse.js"></script>
+    <script src="~/Scripts/plugins/template/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    @*<script src="~/Scripts/plugins/template/dashboard.js"></script>*@
+    <script src="~/Scripts/plugins/template/todolist.js"></script>
+    <!-- End custom js for this page -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\ChemiClean.Repository.dll.config
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\ChemiClean.Repository.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\ChemiClean.Repository.pdb
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\ChemiClean.Core.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\ChemiClean.Core.pdb
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\ChemiClean.Core.dll.config
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\obj\Debug\ChemiClean.Repository.csprojAssemblyReference.cache
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\obj\Debug\ChemiClean.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\obj\Debug\ChemiClean.Repository.csproj.CopyComplete
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\obj\Debug\ChemiClean.Repository.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\obj\Debug\ChemiClean.Repository.pdb
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\PagedList.dll
+C:\Users\Ahmed Hesham\Desktop\ChemiClean\ChemiClean.Core\ChemiClean.Repository\bin\Debug\PagedList.xml

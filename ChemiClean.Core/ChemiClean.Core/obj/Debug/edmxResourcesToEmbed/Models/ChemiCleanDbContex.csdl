@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChemiCleanDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SupplierName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentAvailable" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblProductDocument" Relationship="Self.FK__tblProduc__Produ__1FCDBCEB" FromRole="tblProduct" ToRole="tblProductDocument" />
+  </EntityType>
+  <EntityType Name="tblProductDocument">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="DocumentContent" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblProduct" Relationship="Self.FK__tblProduc__Produ__1FCDBCEB" FromRole="tblProductDocument" ToRole="tblProduct" />
+  </EntityType>
+  <Association Name="FK__tblProduc__Produ__1FCDBCEB">
+    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
+    <End Role="tblProductDocument" Type="Self.tblProductDocument" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblProductDocument">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ChemiCleanDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
+    <EntitySet Name="tblProductDocuments" EntityType="Self.tblProductDocument" />
+    <AssociationSet Name="FK__tblProduc__Produ__1FCDBCEB" Association="Self.FK__tblProduc__Produ__1FCDBCEB">
+      <End Role="tblProduct" EntitySet="tblProducts" />
+      <End Role="tblProductDocument" EntitySet="tblProductDocuments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
